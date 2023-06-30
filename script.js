@@ -110,3 +110,23 @@ function fillArray() {
   
   fillArray();
   
+//task5
+//1. запитати в користувача два значення: рядок, символи для видалення, закинути їх в змінну
+//2. за доп. filter перевірити чи  індекс символу не знаходиться у масиві symbolsToRemove. 
+//Таким чином, лише символи, які не потрібно видаляти, залишаються в новому масиві.
+//3. з'єднуємо елементи нового масиву у рядок за допомогою join, і повертаємо цей результат.
+
+function removeSymbolsFromString(str, symbolsToRemove) {
+    var resultArray = str.split('').filter(function(symbol) {
+      return symbolsToRemove.indexOf(symbol) === -1;
+    });
+    var result = resultArray.join('');
+    return result;
+  }
+  
+  var inputString = prompt('Введіть рядок:');
+  var symbolsToRemove = prompt('Введіть символи для видалення (через кому та пробіл):').split(', ');
+  
+  var outputString = removeSymbolsFromString(inputString, symbolsToRemove);
+  console.log(outputString);
+  
