@@ -83,3 +83,30 @@ function doMath(x, znak, y) {
   
   doMath(x, znak, y);
   
+
+//task4
+//1. Запитати в юзера про кількість елементів у основному і внутрішніх масивах
+//2. створити змінну з основним та зовнішнім масивами, в які будемо пушити значення
+//3. запустивши цикл, запитати значення всіх елементів
+//4. запушити значення в цикли
+
+
+function fillArray() {
+    var arr1 = parseInt(prompt('Скільки елементів буде в першому масиві?'));
+    var arr2 = parseInt(prompt('Скільки елементів буде в другому масиві?'));
+    var array = [];
+  
+    for (var i = 0; i < arr1; i++) {
+      var innerArray = [];
+      for (var j = 0; j < arr2; j++) {
+        var value = prompt('Введіть значення для елемента [' + i + '][' + j + ']:');
+        innerArray.push(value);
+      }
+      array.push(innerArray);
+    }
+  
+    console.log(array);
+  }
+  
+  fillArray();
+  
